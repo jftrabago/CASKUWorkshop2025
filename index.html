@@ -59,6 +59,10 @@ body {font-size:16px; margin:0;}
     font-size: 2.2em;
 }
 </style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
 </head>
 
 <body>
@@ -248,6 +252,11 @@ body {font-size:16px; margin:0;}
   <div class="myDesign-container" id="schedule" style="margin-top:75px">
     <h1 class="myDesign-text-myColor"><b>Program</b></h1>
 
+    <!-- Print Button -->
+    <div style="text-align:left; margin-bottom:15px;">
+      <button onclick="printSchedule()" style="padding:10px 20px; cursor:pointer;">Print PDF</button>
+    </div>
+	
     <!-- Day 1 Program --> 
     <table class="myDesign-table myDesign-table-all schedule-table" style="width: 80%; margin-left: 0;">
       <thead>
@@ -648,6 +657,56 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 </script>
+
+
+<!-- Print Script -->
+<script>
+async function saveScheduleAsPDF() {
+  const { jsPDF } = window.jspdf;
+
+  // Select the schedule container
+  const schedule = document.getElementById("schedule");
+
+  // Use html2canvas to capture the content as a high-quality image
+  const canvas = await html2canvas(schedule, {
+    scale: 2, // Increase resolution for sharpness
+    useCORS: true
+  });
+
+  const imgData = canvas.toDataURL("image/png");
+
+  // A4 page size in millimeters
+  const pdf = new jsPDF('p', 'mm', 'a4');
+  const pageWidth = 210;
+  const pageHeight = 297;
+
+  // Get the image dimensions
+  const imgWidth = pageWidth;
+  const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+  let position = 0;
+
+  // If content is longer than one page, split across pages
+  if (imgHeight <= pageHeight) {
+    pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+  } else {
+    let heightLeft = imgHeight;
+    while (heightLeft > 0) {
+      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+      heightLeft -= pageHeight;
+      position -= pageHeight;
+
+      if (heightLeft > 0) {
+        pdf.addPage();
+      }
+    }
+  }
+
+  // Automatically download the PDF
+  pdf.save("Program.pdf");
+}
+</script>
+
 
 </body>
 </html>
