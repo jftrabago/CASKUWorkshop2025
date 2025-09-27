@@ -254,7 +254,7 @@ body {font-size:16px; margin:0;}
 
     <!-- Print Button -->
     <div style="text-align:left; margin-bottom:15px;">
-      <button onclick="printSchedule()" style="padding:10px 20px; cursor:pointer;">Print PDF</button>
+	  <button onclick="saveScheduleAsPDF()">Download Program as PDF</button>
     </div>
 	
     <!-- Day 1 Program --> 
@@ -659,53 +659,56 @@ function onClick(element) {
 </script>
 
 
-<!-- Print Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
 <script>
 async function saveScheduleAsPDF() {
   const { jsPDF } = window.jspdf;
 
-  // Select the schedule container
   const schedule = document.getElementById("schedule");
 
-  // Use html2canvas to capture the content as a high-quality image
+  // Capture the schedule content as a canvas
   const canvas = await html2canvas(schedule, {
-    scale: 2, // Increase resolution for sharpness
+    scale: 2,
     useCORS: true
   });
 
-  const imgData = canvas.toDataURL("image/png");
-
-  // A4 page size in millimeters
   const pdf = new jsPDF('p', 'mm', 'a4');
   const pageWidth = 210;
   const pageHeight = 297;
 
-  // Get the image dimensions
-  const imgWidth = pageWidth;
-  const imgHeight = (canvas.height * imgWidth) / canvas.width;
+  // Calculate height of one PDF page in canvas pixels
+  const pageHeightPx = (canvas.width * pageHeight) / pageWidth;
+  const totalPages = Math.ceil(canvas.height / pageHeightPx);
 
-  let position = 0;
+  for (let i = 0; i < totalPages; i++) {
+    // Create a temporary canvas for each page slice
+    const pageCanvas = document.createElement('canvas');
+    pageCanvas.width = canvas.width;
+    pageCanvas.height = pageHeightPx;
 
-  // If content is longer than one page, split across pages
-  if (imgHeight <= pageHeight) {
-    pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-  } else {
-    let heightLeft = imgHeight;
-    while (heightLeft > 0) {
-      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-      heightLeft -= pageHeight;
-      position -= pageHeight;
+    const ctx = pageCanvas.getContext('2d');
+    ctx.fillStyle = "white"; // optional, to avoid transparency issues
+    ctx.fillRect(0, 0, pageCanvas.width, pageCanvas.height);
 
-      if (heightLeft > 0) {
-        pdf.addPage();
-      }
-    }
+    // Draw the current slice from the full canvas
+    ctx.drawImage(
+      canvas,
+      0, i * pageHeightPx, canvas.width, pageHeightPx, // source
+      0, 0, canvas.width, pageHeightPx // destination
+    );
+
+    const pageData = pageCanvas.toDataURL('image/png');
+
+    if (i > 0) pdf.addPage();
+    pdf.addImage(pageData, 'PNG', 0, 0, pageWidth, pageHeight);
   }
 
-  // Automatically download the PDF
   pdf.save("Program.pdf");
 }
 </script>
+
 
 
 </body>
