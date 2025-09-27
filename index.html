@@ -665,7 +665,6 @@ function onClick(element) {
 <script>
 async function saveScheduleAsPDF() {
   const { jsPDF } = window.jspdf;
-
   const schedule = document.getElementById("schedule");
 
   // Capture the schedule content as a canvas
@@ -675,39 +674,32 @@ async function saveScheduleAsPDF() {
   });
 
   const pdf = new jsPDF('p', 'mm', 'a4');
-  const pageWidth = 210;
-  const pageHeight = 280;
+  const pageWidth = 210;  // A4 width in mm
+  const pageHeight = 297; // A4 height in mm
 
-  // Calculate height of one PDF page in canvas pixels
-  const pageHeightPx = (canvas.width * pageHeight) / pageWidth;
-  const totalPages = Math.ceil(canvas.height / pageHeightPx);
+  // Convert canvas size to mm scale for PDF
+  const canvasWidth = canvas.width;
+  const canvasHeight = canvas.height;
 
-  for (let i = 0; i < totalPages; i++) {
-    // Create a temporary canvas for each page slice
-    const pageCanvas = document.createElement('canvas');
-    pageCanvas.width = canvas.width;
-    pageCanvas.height = pageHeightPx;
+  // Calculate scale to fit canvas into A4
+  const scaleX = pageWidth / canvasWidth;
+  const scaleY = pageHeight / canvasHeight;
+  const scale = Math.min(scaleX, scaleY);
 
-    const ctx = pageCanvas.getContext('2d');
-    ctx.fillStyle = "white"; // optional, to avoid transparency issues
-    ctx.fillRect(0, 0, pageCanvas.width, pageCanvas.height);
+  const imgWidth = canvasWidth * scale;
+  const imgHeight = canvasHeight * scale;
 
-    // Draw the current slice from the full canvas
-    ctx.drawImage(
-      canvas,
-      0, i * pageHeightPx, canvas.width, pageHeightPx, // source
-      0, 0, canvas.width, pageHeightPx // destination
-    );
+  const imgData = canvas.toDataURL('image/png');
 
-    const pageData = pageCanvas.toDataURL('image/png');
+  // Center the image if needed
+  const xOffset = (pageWidth - imgWidth) / 2;
+  const yOffset = (pageHeight - imgHeight) / 2;
 
-    if (i > 0) pdf.addPage();
-    pdf.addImage(pageData, 'PNG', 0, 0, pageWidth, pageHeight);
-  }
-
+  pdf.addImage(imgData, 'PNG', xOffset, yOffset, imgWidth, imgHeight);
   pdf.save("Program.pdf");
 }
 </script>
+
 
 
 
