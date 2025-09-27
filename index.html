@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CoMFoS2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="assets/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Serif", sans-serif;}
+body {font-size:16px; margin:0;}
+.myDesign-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer;}
+.myDesign-half img:hover{opacity:1;}
+
+/* Footer Styling */
+.myDesign-banner {
+    width: 100%;
+    height: 300px; /* Example: fixed height */
+    background-image: url('images/mautumn.png');
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.myDesign-footer {
+    width: 100%;
+    height: 100px; /* Example: fixed height */
+    background-image: url('images/autumn.png');
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    position: relative;
+}
+
+/* Overlay to make text more readable */
+.myDesign-banner::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.4); /* semi-transparent black overlay */
+    z-index: 1;
+}
+
+/* Text on banner */
+.myDesign-banner h1 {
+    color: white;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin: 0;
+    font-size: 2.2em;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="myDesign-sidebar myDesign-myColor myDesign-collapse myDesign-top myDesign-large myDesign-padding" style="z-index:3;width:200px;font-weight:normal;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="myDesign_close()" class="myDesign-button myDesign-hide-large myDesign-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="myDesign-bar-block">
+    <!-- <a href="#" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Home</a>  -->
+    <a href="#about" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">About</a> 
+    <a href="#speakers" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Speakers</a> 
+    <a href="#schedule" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Program</a>
+    <a href="#venue" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Venue</a> 
+    <a href="#organizingcommittee" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Organizers</a> 
+    <a href="#contact" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="myDesign-container myDesign-top myDesign-hide-large myDesign-myColor myDesign-xlarge myDesign-padding">
+  <a href="javascript:void(0)" class="myDesign-button myDesign-myColor myDesign-margin-right" onclick="myDesign_open()">☰</a>
+  <span><b>CAS&ndash;KU Workshop</b></span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="myDesign-overlay myDesign-hide-large" onclick="myDesign_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Header/Banner -->
+<div class="myDesign-banner">
+  <h1 style="text-align: left; margin-left: 20px;">
+    Welcome to<br>
+    Czech Academy of Sciences&ndash;Kanazawa University Workshop<br>
+    November 2 & 3, 2025<br>
+    Kanazawa, Japan
+  </h1>
+</div>
+
+  
+<!-- !PAGE CONTENT! -->
+<div class="myDesign-main" style="margin-left:300px;margin-right:200px">
+  
+
+  <!-- About Section -->
+  <div class="myDesign-container" style="margin-top:40px" id="about">
+    <h1 class="myDesign-text-myColor"><b>About</b></h1>
+    <p>[Insert a brief introduction]</p> 
+  </div>
+
+  
+  
+
+  
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+  <!-- Photo grid (modal) -->
+  <!-- <div>
+    <div>
+      <img src="images/comfos2025.jpg" style="width:100%" alt="comfos2025">
+    </div>
+  </div> -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+  
+  
+  
+  
+  
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+  <!-- Important Dates -->
+  <!-- <div class="myDesign-container" id="importantdates" style="margin-top:75px">
+    <h1 class="myDesign-text-myColor"><b>Important Dates</b></h1>
+    <p>To be announced.</p>
+  </div> -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  
+
+
+
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+  <!-- Speakers -->
+  <div class="myDesign-container" id="speakers" style="margin-top:75px">
+    <h1 class="myDesign-text-myColor"><b>Speakers</b></h1>
+    <!-- <hr style="width:50px;border:5px solid red" class="myDesign-round"> -->
+    <p>
+		  <table class="myDesign-tableOrganizer">
+
+		    <tr> 
+		      <td align="right"><b>Martin KALOUSEK</b></td>
+		      <td align="left">Czech Academy of Sciences</td>
+		    </tr>
+
+		    <tr> 
+		      <td align="right"><b>Ondřej KREML</b></td>
+		      <td align="left">Czech Academy of Sciences</td>
+		    </tr>
+
+		    <tr> 
+		      <td align="right"><b>Václav MACHA</b></td>
+		      <td align="left">Czech Academy of Sciences</td>
+		    </tr>
+
+		    <tr> 
+		      <td align="right"><b>Yuma NAKAMURA</b></td>
+		      <td align="left">Kanazawa University, Japan</td>
+		    </tr>
+
+		    <tr> 
+		      <td align="right"><b>Šárka NEČASOVÁ</b></td>
+		      <td align="left">Czech Academy of Sciences</td>
+		    </tr>
+
+		    <tr> 
+		      <td align="right"><b>Hirofumi NOTSU</b></td>
+		      <td align="left">Kanazawa University, Japan</td>
+		    </tr>
+
+		    <tr> 
+		      <td align="right"><b>Sahat Pandapotan NAINGGOLAN</b></td>
+		      <td align="left">Kanazawa University, Japan</td>
+		    </tr>
+
+
+		    <tr> 
+		      <td align="right"><b>Yuki KARASAWA</b></td>
+		      <td align="left">Kanazawa University, Japan</td>
+		    </tr>
+			
+			
+		    <tr> 
+		      <td align="right"><b>Sadique REHMAN</b></td>
+		      <td align="left">Kanazawa University, Japan</td>
+		    </tr>
+
+		    <tr> 
+		      <td align="right"><b>Koya SAKAKIBARA</b></td>
+		      <td align="left">Kanazawa University, Japan</td>
+		    </tr>
+
+		    <tr> 
+		      <td align="right"><b>Kharisma Surya PUTRI</b></td>
+		      <td align="left">Kanazawa University, Japan</td>
+		    </tr>
+
+		    <tr> 
+		      <td align="right"><b>Jan VALAŠEK</b></td>
+		      <td align="left">Czech Academy of Sciences</td>
+		    </tr>
+
+		    <tr> 
+		      <td align="right"><b>Afifah Maya IKNANINGRUM</b></td>
+		      <td align="left">Kanazawa University, Japan</td>
+		    </tr>
+
+		    <tr> 
+		      <td align="right"><b>Ousamma OUNISSI</b></td>
+		      <td align="left">Kanazawa University, Japan</td>
+		    </tr>
+
+		    <tr> 
+		      <td align="right"><b>Taikei UECHI</b></td>
+		      <td align="left">Kanazawa University, Japan</td>
+		    </tr>
+
+		  </table>
+		  
+		  
+		  
+		
+	</p>
+  </div>
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+    
+  
+  
+  
+  
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- Program -->
+  <div class="myDesign-container" id="schedule" style="margin-top:75px">
+    <h1 class="myDesign-text-myColor"><b>Program</b></h1>
+
+    <!-- Day 1 Program --> 
+    <table class="myDesign-table myDesign-table-all schedule-table" style="width: 80%; margin-left: 0;">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Day 1: November 2, 2025</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Morning -->
+        <tr>
+          <th scope="row">09:50 - 10:00</th>
+          <td>
+            <div class="session session-keynote myDesign-card myDesign-padding">
+              <span class="session-title">Opening Remarks</span>
+              <span class="session-speaker">Speaker 0</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">10:00 - 11:00</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Long Talk 1</span>
+              <span class="session-speaker">Speaker 1</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">11:00 - 12:00</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Long Talk 2</span>
+              <span class="session-speaker">Speaker 2</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">12:00 - 14:00</th>
+          <td>
+            <div class="session session-break myDesign-card myDesign-padding">
+              <span class="session-title">Lunch Break</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Afternoon -->
+        <!-- Long Talk 3 -->
+        <tr>
+          <th scope="row">14:00 - 15:00</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Long Talk 3</span>
+              <span class="session-speaker">Speaker 3</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Short Talks -->
+        <tr>
+          <th scope="row">15:00 - 15:15</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Short Talk 1</span>
+              <span class="session-speaker">Speaker 4</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">15:15 - 15:30</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Short Talk 2</span>
+              <span class="session-speaker">Speaker 5</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Medium Talk 1 -->
+        <tr>
+          <th scope="row">15:30 - 16:00</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Medium Talk 1</span>
+              <span class="session-speaker">Speaker 6</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Break -->
+        <tr>
+          <th scope="row">16:00 - 16:15</th>
+          <td>
+            <div class="session session-break myDesign-card myDesign-padding">
+              <span class="session-title">Break</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Long Talk 4 -->
+        <tr>
+          <th scope="row">16:15 - 17:15</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Long Talk 4</span>
+              <span class="session-speaker">Speaker 7</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Short Talks -->
+        <tr>
+          <th scope="row">17:15 - 17:30</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Short Talk 3</span>
+              <span class="session-speaker">Speaker 8</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">17:30 - 17:45</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Short Talk 4</span>
+              <span class="session-speaker">Speaker 9</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Break before last Medium Talk -->
+        <tr>
+          <th scope="row">17:45 - 18:00</th>
+          <td>
+            <div class="session session-break myDesign-card myDesign-padding">
+              <span class="session-title">Break</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Medium Talk 2 -->
+        <tr>
+          <th scope="row">18:00 - 18:30</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Medium Talk 2</span>
+              <span class="session-speaker">Speaker 10</span>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Short Talks after Medium Talk 2 -->
+        <tr>
+          <th scope="row">18:30 - 18:45</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Short Talk 5</span>
+              <span class="session-speaker">Speaker 11</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">18:45 - 19:00</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Short Talk 6</span>
+              <span class="session-speaker">Speaker 12</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">19:00 - 19:15</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Short Talk 7</span>
+              <span class="session-speaker">Speaker 13</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">19:30 - onwards</th>
+          <td>
+            <div class="session session-break myDesign-card myDesign-padding">
+              <span class="session-title">Party / Social Gathering</span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <br>
+
+    <!-- Day 2 Program --> 
+    <table class="myDesign-table myDesign-table-all schedule-table" style="width: 80%; margin-left: 0;">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Day 2: November 3, 2025</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">10:00 - 11:00</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Long Talk 5</span>
+              <span class="session-speaker">Speaker 14</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">11:00 - 12:00</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Long Talk 6</span>
+              <span class="session-speaker">Speaker 15</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">12:00 - 14:00</th>
+          <td>
+            <div class="session session-break myDesign-card myDesign-padding">
+              <span class="session-title">Lunch Break</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">14:00 - 17:50</th>
+          <td>
+            <div class="session session-talk myDesign-card myDesign-padding">
+              <span class="session-title">Free Discussion</span>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <th scope="row">17:50 - 18:00</th>
+          <td>
+            <div class="session session-keynote myDesign-card myDesign-padding">
+              <span class="session-title">Closing Remarks</span>
+              <span class="session-speaker">Speaker 0</span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+  <!-- Venue -->
+  <div class="myDesign-container" id="venue" style="margin-top:75px">
+    <h1 class="myDesign-text-myColor"><b>Venue</b></h1>
+    <!-- <hr style="width:50px;border:5px solid red" class="myDesign-round"> -->
+    <p>
+		<b>Place:</b>
+		Garden Room, 2F, Shiinoki Cultural Complex, Kanazawa City, Ishikawa Prefecture, Japan
+		<br>
+		<b>Address:</b> 
+		<a href="https://www.google.com/maps/place/Shiinoki+Cultural+Complex/@36.562426,136.655252,948m/data=!3m2!1e3!4b1!4m6!3m5!1s0x5ff83381a69de249:0xae3bdf657b286f3c!8m2!3d36.562426!4d136.6578269!16s%2Fg%2F121v8jft?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">2-chōme-1-1 Hirosaka, Kanazawa City, Ishikawa Prefecture 920-0962</a>
+	</p>	
+	<p>  
+		<img src="images/venue.jpg" alt="venue" style="width: 71%"><br><br>
+		<img src="images/map_2F.png" alt="venue" style="width: 50%">
+		<img src="images/room.png" alt="venue" style="width: 20.5%"><br>
+    </p>
+  </div>
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+  
+  
+ 
+ 
+
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+  <!-- Registration -->
+  <!-- <div class="myDesign-container" id="registration" style="margin-top:75px">
+    <h1 class="myDesign-text-myColor"><b>Registration</b></h1>
+    <p>To be announced.</p>
+  </div> -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+
+  
+  
+  
+  
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+  <!-- Organizing Committee-->
+  <div class="myDesign-container" id="organizingcommittee" style="margin-top:75px">
+    <h1 class="myDesign-text-myColor"><b>Organizers</b></h1>
+    <!-- <hr style="width:50px;border:5px solid red" class="myDesign-round"> -->
+    <p> 
+	      <table class="myDesign-tableOrganizer">
+	        <tr> 
+			  <td align="right"><b><a href="https://sites.google.com/site/masatowebe/" target="_blank">Masato KIMURA</a></b></td>
+	          <td align="left">Kanazawa University, Japan</td>
+	        </tr>
+
+	        <tr> 
+			  <td align="right"><b><a href="https://scheme.hn/" target="_blank">Hirofumi NOTSU</a></b></td>
+	          <td align="left">Kanazawa University, Japan</td>
+	        </tr>
+			
+	        <tr>
+	          <td align="right"><b><a href="https://jftrabago.github.io/" target="_blank">Julius Fergy RABAGO</a></b></td>
+	          <td align="left">Kanazawa University, Japan</td>
+	        </tr>
+			
+	        <tr> 
+	          <td align="right"><b><a href="https://sites.google.com/site/koyasakakibara/home" target="_blank">Koya SAKAKIBARA</a></b></td>
+	          <td align="left">Kanazawa University, Japan</td>
+	        </tr>
+	      </table>
+	</p>
+  </div>
+
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+  
+  
+  
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+  <!-- Contact -->
+  <div class="myDesign-container" id="contact" style="margin-top:75px">
+    <h1 class="myDesign-text-myColor"><b>Contact</b></h1>
+    <!-- <hr style="width:50px;border:5px solid red" class="myDesign-round"> -->
+    <p>If you have any questions or requests, send an e-mail to the local organizing committee at TBA.</p>
+  </div>
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+  
+<!-- End page content -->
+</div>
+
+
+
+
+
+
+
+
+<!-- MAIN.CSS Container -->
+<div class="myDesign-light-grey myDesign-container myDesign-padding-32" style="margin-top:75px;padding-right:58px"><p class="myDesign-right">&copy; <a href="#" title="MAIN.CSS" target="_blank" class="myDesign-hover-opacity">CAS&ndash;KU Workshop Organizers 2025</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function myDesign_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function myDesign_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
