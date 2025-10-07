@@ -1,5 +1,10 @@
 /* W3.CSS 5.02 March 31 2025 by Jan Egil and Borge Refsnes */
-html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+html, body {
+    font-family: "Avenir";
+    font-size: 16px;
+    line-height: 1.5;
+}
+
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}summary{display:list-item}
@@ -9,7 +14,7 @@ audio:not([controls]){display:none;height:0}[hidden],template{display:none}
 
 a{background-color:transparent}a:active,a:hover{outline-width:0}
 abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
-b,strong{font-weight:bolder}dfn{font-style:italic}mark{background:#ff0;color:#000}
+b,strong{font-weight:normal}dfn{font-style:italic}mark{background:#ff0;color:#000}
 small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
 sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}
 code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}
@@ -30,7 +35,7 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
 html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
 h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
 .myDesign-serif{font-family:serif}.myDesign-sans-serif{font-family:sans-serif}.myDesign-cursive{font-family:cursive}.myDesign-monospace{font-family:monospace}
-h1,h2,h3,h4,h5,h6{font-family:"Candara",Arial,sans-serif;font-weight:400;margin:10px 0}.myDesign-wide{letter-spacing:4px}
+h1,h2,h3,h4,h5,h6{font-family:"Avenir",Arial,sans-serif;font-weight:400;margin:10px 0}.myDesign-wide{letter-spacing:4px}
 hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .myDesign-image{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}
 .myDesign-table,.myDesign-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.myDesign-table-all{border:1px solid #ccc}
@@ -162,7 +167,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 
 /* Colors */
-.myDesign-myColor,.myDesign-hover-amber:hover{color:#000!important;background-color:#132642!important}
+.myDesign-myColor,.myDesign-hover-amber:hover{color:#fff!important;background-color:#1d324d!important}
 .myDesign-brightOrange,.myDesign-hover-amber:hover{color:#000!important;background-color:#faa337!important}
 .myDesign-amber,.myDesign-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
 .myDesign-aqua,.myDesign-hover-aqua:hover{color:#000!important;background-color:#00ffff!important}
@@ -264,3 +269,42 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .myDesign-border-dark-grey,.myDesign-hover-border-dark-grey:hover,.myDesign-border-dark-gray,.myDesign-hover-border-dark-gray:hover{border-color:#616161!important}
 .myDesign-border-pale-red,.myDesign-hover-border-pale-red:hover{border-color:#ffe7e7!important}.myDesign-border-pale-green,.myDesign-hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .myDesign-border-pale-yellow,.myDesign-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.myDesign-border-pale-blue,.myDesign-hover-border-pale-blue:hover{border-color:#e7ffff!important}
+
+
+
+
+/* Session Styling */
+.session { border-radius: 4px; height: 100%; }
+.session-title { font-weight: bold; display: block; margin-bottom: 5px; }
+.session-speaker { font-size: 0.85rem; color: #555; display: block; }
+.session-details { font-size: 0.85rem; margin-top: 8px; color: #666; }
+
+/* Ultra-light color coding for session types */
+.session-keynote { 
+    background-color: #fafafa; /* ultra-light grey */
+    border-left: 4px solid #dcdcdc; /* very soft grey accent */ 
+}
+.session-talk { 
+    background-color: #f0f8ff; /* extremely light blue */
+    border-left: 4px solid #a8d0ff; /* soft pastel blue accent */ 
+}
+.session-break { 
+    background-color: #fffef0; /* ultra-light yellow */
+    border-left: 4px solid #fff4b2; /* soft pastel yellow accent */ 
+}
+.session-workshop { 
+    background-color: #fffaf0; /* ultra-light orange/cream */
+    border-left: 4px solid #ffe0a3; /* very soft accent */ 
+}
+
+.schedule-table {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.schedule-table th:first-child,
+.schedule-table td:first-child {
+  width: 5%;               /* Forces auto-fit */
+  white-space: nowrap;     /* Prevents text from wrapping to multiple lines */
+  text-align: left;        /* Optional: aligns time to the left */
+}
