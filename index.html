@@ -1,128 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CASKUWorkshop2025</title>
+<title>CoMFoS2026</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="assets/main.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 
 <style>
-body,h1,h2,h3,h4,h5 {font-family: "Serif", sans-serif;}
-body {font-size:16px; margin:0;}
-.myDesign-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer;}
-.myDesign-half img:hover{opacity:1;}
-
-/* Footer Styling */
-.myDesign-banner {
-    width: 100%;
-    height: 350px; /* Example: fixed height */
-    background-image: url('images/mautumn.png');
-    background-size: cover;       
-    background-position: center;  
-    background-repeat: no-repeat; 
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.myDesign-footer {
-    width: 100%;
-    height: 100px; /* Example: fixed height */
-    background-image: url('images/autumn.png');
-    background-size: cover;       
-    background-position: center;  
-    background-repeat: no-repeat; 
-    position: relative;
-}
-
-/* Overlay to make text more readable */
-.myDesign-banner::before {
-    content: "";
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color: rgba(0,0,0,0.4); /* semi-transparent black overlay */
-    z-index: 1;
-}
-
-/* Text on banner */
-.myDesign-banner h1 {
-    color: white;
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    margin: 0;
-    font-size: 2.2em;
-}
+body,h1,h2,h3,h4,h5 {font-family: "Serif", sans-serif}
+body {font-size:16px;}
+.myDesign-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.myDesign-half img:hover{opacity:1}
 </style>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
 </head>
 
 <body>
 
 <!-- Sidebar/menu -->
-<nav class="myDesign-sidebar myDesign-myColor myDesign-collapse myDesign-top myDesign-large myDesign-padding" style="z-index:3;width:130px;font-weight:normal;" id="mySidebar"><br>
+<nav class="myDesign-sidebar myDesign-brightOrange myDesign-collapse myDesign-top myDesign-large myDesign-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
   <a href="javascript:void(0)" onclick="myDesign_close()" class="myDesign-button myDesign-hide-large myDesign-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="myDesign-container">
+    <h3 class="myDesign-padding-64"><b>Co</b>ntinuum<br><b>M</b>echanics<br><b>Fo</b>cusing on<br><b>S</b>ingularities</h3>
+  </div>
   <div class="myDesign-bar-block">
-    <!-- <a href="#" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Home</a>  -->
+    <a href="#" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Home</a> 
     <a href="#about" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">About</a> 
+    <a href="#comfos2026" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">CoMFoS 2026</a> 
+	<a href="#importantdates" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Important Dates</a> 
     <a href="#speakers" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Speakers</a> 
-    <a href="#schedule" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Program</a>
+    <a href="#conferenceprogram" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Conference Program</a>
     <a href="#venue" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Venue</a> 
-    <a href="#organizingcommittee" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Organizers</a> 
+    <a href="#registration" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Registration</a> 
+    <a href="#organizingcommittee" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Organizing Committee</a> 
     <a href="#contact" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Contact</a>
+	<a href="#history" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Previous Meetings</a>
   </div>
 </nav>
 
 <!-- Top menu on small screens -->
-<header class="myDesign-container myDesign-bottom myDesign-hide-large myDesign-myColor myDesign-xlarge myDesign-padding">
+<header class="myDesign-container myDesign-top myDesign-hide-large myDesign-brightOrange myDesign-xlarge myDesign-padding">
   <a href="javascript:void(0)" class="myDesign-button myDesign-myColor myDesign-margin-right" onclick="myDesign_open()">☰</a>
-  <span><b>CAS&ndash;KU Workshop</b></span>
+  <span><b>Co</b>ntinuum <b>M</b>echanics <b>Fo</b>cusing on <b>S</b>ingularities</span>
 </header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="myDesign-overlay myDesign-hide-large" onclick="myDesign_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-<!-- Header/Banner -->
-<div class="myDesign-banner">
-  <h1 style="text-align: left; margin-left: 20px; margin-top:20px">
-    Welcome to<br>
-    Czech Academy of Sciences&ndash;Kanazawa University Workshop<br>
-	November 2 & 3, 2025<br>Kanazawa, Japan
-  </h1> 
-</div>
-
-  
 <!-- !PAGE CONTENT! -->
-<div class="myDesign-main" style="margin-left:200px;margin-right:200px">
-  
+<div class="myDesign-main" style="margin-left:340px;margin-right:40px">
 
-  <!-- About Section -->
-  <div class="myDesign-container" style="margin-top:40px" id="about">
-    <h1 class="myDesign-text-myColor"><b>About</b></h1>
-    <p>[Insert a brief introduction]</p> 
+  <!-- Header -->
+  <div class="myDesign-container" style="margin-top:80px" id="about">
+    <h1 class="myDesign-jumbo"><b>CoMFoS2026</b></h1>
+    <h1 class="myDesign-xxxlarge myDesign-text-myColor"><b>About</b></h1>
+    <!-- <hr style="width:50px;border:5px solid red" class="myDesign-round"> -->
+  <p>
+
+    <p>
+        This conference focuses on the modeling, numerical analysis, and scientific computing of nonlinear phenomena, covering both theoretical developments and computational approaches. It aims to showcase the latest research in applied mathematics and its practical applications, spanning a broad range of topics related to partial differential equations.
+    </p>
+
+    <p>Topics of interest include, but are not limited to:</p>
+    <ul>
+        <li>Fracture mechanics beyond linear elasticity</li>
+        <li>Nonlinear elasticity or plastic deformation</li>
+        <li>Reaction–diffusion systems in chemistry or biology</li>
+        <li>Fluid dynamics with turbulence</li>
+        <li>Cell migration, chemotaxis, and pattern formation in biological systems</li>
+        <li>Wave propagation in nonlinear media</li>
+        <li>Moving boundary problems</li>
+    </ul>
+
+    <p>
+        Through invited talks and interactive sessions, participants will engage with leading experts, exchange ideas, and gain insights into mathematical frameworks and computational methodologies for addressing complex nonlinear problems across disciplines such as physics, biology, and engineering.
+    </p>
+
+
+
   </div>
-
-  
   
 
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+  <!-- Important Dates -->
+  <div class="myDesign-container" id="comfos2026" style="margin-top:75px">
+    <h1 class="myDesign-xxxlarge myDesign-text-myColor"><b>CoMFoS 2026</b></h1>
+    <!-- <hr style="width:50px;border:5px solid red" class="myDesign-round"> -->
+      <p>	
+  	    The conference is organized in conjuction with CoMFoS2026 which was initiated in 1995 under the auspices of the activity group <a href="https://sites.google.com/a/comfos.org/comfos/mathematical-aspects-of-continuum-mechanicsmacm?authuser=0" target="_blank">"Continuum Mechanics Focusing on Singularities (CoMFoS)"</a> of the Japan Society for Industrial and Applied Mathematics (JSIAM). 
+  	    From April 2010, the activity group CoMFoS was renamed <a href="https://sites.google.com/a/comfos.org/comfos/mathematical-aspects-of-continuum-mechanicsmacm?authuser=0" target="_blank">"Mathematical Aspects of Continuum Mechanics (MACM)"</a>. 
+  	    The links for the recent <a href="https://macm.jsiam.org/home/CoMFoS" target="_blank">CoMFoS meetings</a> can be accessed here: <a href="http://conf.ict.nsc.ru/rusjapfrac2/en" target="_blank">CoMFoS2020</a>, <a href="http://conf.nsc.ru/rusjapfrac3/en/general_info" target="_blank">CoMFoS2021</a>, <a href="https://sites.google.com/view/comfos22/home" target="_blank">CoMFoS2022</a>, and <a href="https://sites.google.com/view/comfos23" target="_blank">CoMFoS2023</a>.
+      </p>	
+  
+    <p>
+  	  The last CoMFoS meeting took place on March 16–17, 2025, in Kanazawa, Ishikawa Prefecture, Japan, in conjunction with <a href="https://jftrabago.github.io/MNANP2025/" target="_blank">MNANP2025</a>, a workshop dedicated to the Modeling and Numerical Analysis of Nonlinear Phenomena.
+    </p>
+  </div>
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  
   
   <!-- ================================================================================= -->
   <!-- ================================================================================= -->
   <!-- ================================================================================= --> 
   <!-- Photo grid (modal) -->
-  <!-- <div>
+  <div>
     <div>
-      <img src="images/comfos2025.jpg" style="width:100%" alt="comfos2025">
+      <img src="images/comfos2025.jpg" style="width:100%" alt="comfos2025"> 
     </div>
-  </div> -->
+  </div>
   <!-- ================================================================================= -->
   <!-- ================================================================================= -->
   <!-- ================================================================================= --> 
@@ -135,10 +124,11 @@ body {font-size:16px; margin:0;}
   <!-- ================================================================================= -->
   <!-- ================================================================================= --> 
   <!-- Important Dates -->
-  <!-- <div class="myDesign-container" id="importantdates" style="margin-top:75px">
-    <h1 class="myDesign-text-myColor"><b>Important Dates</b></h1>
+  <div class="myDesign-container" id="importantdates" style="margin-top:75px">
+    <h1 class="myDesign-xxxlarge myDesign-text-myColor"><b>Important Dates</b></h1>
+    <!-- <hr style="width:50px;border:5px solid red" class="myDesign-round"> -->
     <p>To be announced.</p>
-  </div> -->
+  </div>
   <!-- ================================================================================= -->
   <!-- ================================================================================= -->
   <!-- ================================================================================= -->
@@ -151,387 +141,27 @@ body {font-size:16px; margin:0;}
   <!-- ================================================================================= --> 
   <!-- Speakers -->
   <div class="myDesign-container" id="speakers" style="margin-top:75px">
-    <h1 class="myDesign-text-myColor"><b>Speakers</b></h1>
+    <h1 class="myDesign-xxxlarge myDesign-text-myColor"><b>Speakers</b></h1>
     <!-- <hr style="width:50px;border:5px solid red" class="myDesign-round"> -->
-   	<p><i>To be confirmed.</i></p>
-    <p>
-			<table class="myDesign-tableOrganizer">
-			  <tr> 
-			    <td align="right"><b>Afifah Maya IKNANINGRUM</b></td>
-			    <td align="left">Kanazawa University, Japan</td>
-			  </tr>
-
-	        <tr>
-	          <td align="right"><b>Yoshiyuki KAGEI</b></td>
-	          <td align="left">Insitute of Science Tokyo, Japan</td>
-	        </tr>
-
-			  <tr> 
-			    <td align="right"><b>Martin KALOUSEK</b></td>
-			    <td align="left">Czech Academy of Sciences</td>
-			  </tr>
-
-			  <tr> 
-			    <td align="right"><b>Yuki KARASAWA</b></td>
-			    <td align="left">Kanazawa University, Japan</td>
-			  </tr>
-
-			  <tr> 
-			    <td align="right"><b>Ondřej KREML</b></td>
-			    <td align="left">Czech Academy of Sciences</td>
-			  </tr>
-
-			  <tr> 
-			    <td align="right"><b>Václav MACHA</b></td>
-			    <td align="left">Czech Academy of Sciences</td>
-			  </tr>
-
-			  <tr> 
-			    <td align="right"><b>Patrick van MEURS</b></td>
-			    <td align="left">Kanazawa University, Japan</td>
-			  </tr>
-
-			  <tr> 
-			    <td align="right"><b>Sahat Pandapotan NAINGGOLAN</b></td>
-			    <td align="left">Kanazawa University, Japan</td>
-			  </tr>
-
-			  <tr> 
-			    <td align="right"><b>Yuma NAKAMURA</b></td>
-			    <td align="left">Kanazawa University, Japan</td>
-			  </tr>
-
-			  <tr> 
-			    <td align="right"><b>Šárka NEČASOVÁ</b></td>
-			    <td align="left">Czech Academy of Sciences</td>
-			  </tr>
-
-			  <tr> 
-			    <td align="right"><b>Hirofumi NOTSU</b></td>
-			    <td align="left">Kanazawa University, Japan</td>
-			  </tr>
-
-			  <tr> 
-			    <td align="right"><b>Ousamma OUNISSI</b></td>
-			    <td align="left">Kanazawa University, Japan</td>
-			  </tr>
-
-			  <tr> 
-			    <td align="right"><b>Norbert POŽÁR</b></td>
-			    <td align="left">Kanazawa University, Japan</td>
-			  </tr>
-
-			  <tr> 
-			    <td align="right"><b>Kharisma Surya PUTRI</b></td>
-			    <td align="left">Kanazawa University, Japan</td>
-			  </tr>
-
-			  <tr> 
-			    <td align="right"><b>Sadique REHMAN</b></td>
-			    <td align="left">Kanazawa University, Japan</td>
-			  </tr>
-
-			  <tr> 
-			    <td align="right"><b>Koya SAKAKIBARA</b></td>
-			    <td align="left">Kanazawa University, Japan</td>
-			  </tr>
-
-			  <tr> 
-			    <td align="right"><b>Taikei UECHI</b></td>
-			    <td align="left">Kanazawa University, Japan</td>
-			  </tr>
-
-			  <tr> 
-			    <td align="right"><b>Jan VALAŠEK</b></td>
-			    <td align="left">Czech Academy of Sciences</td>
-			  </tr>
-			</table>
-	</p>
+    <p>To be announced.</p>
   </div>
   <!-- ================================================================================= -->
   <!-- ================================================================================= -->
   <!-- ================================================================================= --> 
     
   
-  
-  
-  
   <!-- ================================================================================= -->
   <!-- ================================================================================= -->
-  <!-- ================================================================================= -->
-  <!-- Program -->
-  <div class="myDesign-container" id="schedule" style="margin-top:75px">
-    <h1 class="myDesign-text-myColor"><b>Program</b></h1>
-	
-    <!-- Day 1 Program --> 
-    <table class="myDesign-table myDesign-table-all schedule-table" style="width: 80%; margin-left: 0;">
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th>Day 1: November 2, 2025</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Morning -->
-        <tr>
-          <th scope="row">09:50 - 10:00</th>
-          <td>
-            <div class="session session-keynote myDesign-card myDesign-padding">
-              <span class="session-title">Opening Remarks</span>
-              <span class="session-speaker">Speaker 0</span>
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">10:00 - 11:00</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Long Talk 1</span>
-              <span class="session-speaker">Speaker 1</span>
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">11:00 - 12:00</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Long Talk 2</span>
-              <span class="session-speaker">Speaker 2</span>
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">12:00 - 14:00</th>
-          <td>
-            <div class="session session-break myDesign-card myDesign-padding">
-              <span class="session-title">Lunch Break</span>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Afternoon -->
-        <!-- Long Talk 3 -->
-        <tr>
-          <th scope="row">14:00 - 15:00</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Long Talk 3</span>
-              <span class="session-speaker">Speaker 3</span>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Short Talks -->
-        <tr>
-          <th scope="row">15:00 - 15:15</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Short Talk 1</span>
-              <span class="session-speaker">Speaker 4</span>
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">15:15 - 15:30</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Short Talk 2</span>
-              <span class="session-speaker">Speaker 5</span>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Medium Talk 1 -->
-        <tr>
-          <th scope="row">15:30 - 16:00</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Medium Talk 1</span>
-              <span class="session-speaker">Speaker 6</span>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Break -->
-        <tr>
-          <th scope="row">16:00 - 16:15</th>
-          <td>
-            <div class="session session-break myDesign-card myDesign-padding">
-              <span class="session-title">Break</span>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Long Talk 4 -->
-        <tr>
-          <th scope="row">16:15 - 17:15</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Long Talk 4</span>
-              <span class="session-speaker">Speaker 7</span>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Short Talks -->
-        <tr>
-          <th scope="row">17:15 - 17:30</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Short Talk 3</span>
-              <span class="session-speaker">Speaker 8</span>
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">17:30 - 17:45</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Short Talk 4</span>
-              <span class="session-speaker">Speaker 9</span>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Break before last Medium Talk -->
-        <tr>
-          <th scope="row">17:45 - 18:00</th>
-          <td>
-            <div class="session session-break myDesign-card myDesign-padding">
-              <span class="session-title">Break</span>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Medium Talk 2 -->
-        <tr>
-          <th scope="row">18:00 - 18:30</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Medium Talk 2</span>
-              <span class="session-speaker">Speaker 10</span>
-            </div>
-          </td>
-        </tr>
-
-        <!-- Short Talks after Medium Talk 2 -->
-        <tr>
-          <th scope="row">18:30 - 18:45</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Short Talk 5</span>
-              <span class="session-speaker">Speaker 11</span>
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">18:45 - 19:00</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Short Talk 6</span>
-              <span class="session-speaker">Speaker 12</span>
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">19:00 - 19:15</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Short Talk 7</span>
-              <span class="session-speaker">Speaker 13</span>
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">19:30 - </th>
-          <td>
-            <div class="session session-break myDesign-card myDesign-padding">
-              <span class="session-title">Party / Social Gathering</span>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <br>
-
-    <!-- Day 2 Program --> 
-    <table class="myDesign-table myDesign-table-all schedule-table" style="width: 80%; margin-left: 0;">
-      <thead>
-        <tr>
-          <th>Time</th>
-          <th>Day 2: November 3, 2025</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">10:00 - 11:00</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Long Talk 5</span>
-              <span class="session-speaker">Speaker 14</span>
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">11:00 - 12:00</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Long Talk 6</span>
-              <span class="session-speaker">Speaker 15</span>
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">12:00 - 14:00</th>
-          <td>
-            <div class="session session-break myDesign-card myDesign-padding">
-              <span class="session-title">Lunch Break</span>
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">14:00 - 17:50</th>
-          <td>
-            <div class="session session-talk myDesign-card myDesign-padding">
-              <span class="session-title">Free Discussion</span>
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">17:50 - 18:00</th>
-          <td>
-            <div class="session session-keynote myDesign-card myDesign-padding">
-              <span class="session-title">Closing Remarks</span>
-              <span class="session-speaker">Speaker 0</span>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <!-- ================================================================================= --> 
+  <!-- Conference Program -->
+  <div class="myDesign-container" id="conferenceprogram" style="margin-top:75px">
+    <h1 class="myDesign-xxxlarge myDesign-text-myColor"><b>Conference Program</b></h1>
+    <!-- <hr style="width:50px;border:5px solid red" class="myDesign-round"> -->
+    <p>To be announced.</p>
   </div>
   <!-- ================================================================================= -->
   <!-- ================================================================================= -->
   <!-- ================================================================================= -->
-  
- <!-- Print Button -->
- <br>
- <div style="text-align:left; margin-bottom:15px;">
- 	<button onclick="saveScheduleAsPDF()">Download Program as PDF</button>
- </div>
-  
   
   
   
@@ -544,23 +174,12 @@ body {font-size:16px; margin:0;}
   <!-- ================================================================================= --> 
   <!-- Venue -->
   <div class="myDesign-container" id="venue" style="margin-top:75px">
-    <h1 class="myDesign-text-myColor"><b>Venue</b></h1>
+    <h1 class="myDesign-xxxlarge myDesign-text-myColor"><b>Venue</b></h1>
     <!-- <hr style="width:50px;border:5px solid red" class="myDesign-round"> -->
     <p>
-		<b>Place:</b>
-		Seminar Room A (November 2) and Seminar Room B (November 3)<br> 
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		3F, Shiinoki Cultural Complex, Kanazawa City, Ishikawa Prefecture, Japan
-		<br>
-		<b>Address:</b> 
-		<a href="https://www.google.com/maps/place/Shiinoki+Cultural+Complex/@36.562426,136.655252,948m/data=!3m2!1e3!4b1!4m6!3m5!1s0x5ff83381a69de249:0xae3bdf657b286f3c!8m2!3d36.562426!4d136.6578269!16s%2Fg%2F121v8jft?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">2-chōme-1-1 Hirosaka, Kanazawa City, Ishikawa Prefecture 920-0962</a>
-	</p>	
-	<p>  
-		<img src="images/venue.jpg" alt="venue" style="width: 70%"><br><br>
-		<img src="images/map_3F_venue.png" alt="venue" style="width: 70%"><br><br>
-		<img src="images/seminarA_venue.png" alt="venue" style="width: 35%">
-		<img src="images/seminarB_venue.png" alt="venue" style="width: 35%">
-    </p>
+	CoMFoS 2026 will be held in the Philippines, marking the first time the conference is taking place outside Japan. 
+	Details of the meeting will be announced soon.
+	</p>
   </div>
   <!-- ================================================================================= -->
   <!-- ================================================================================= -->
@@ -574,10 +193,11 @@ body {font-size:16px; margin:0;}
   <!-- ================================================================================= -->
   <!-- ================================================================================= --> 
   <!-- Registration -->
-  <!-- <div class="myDesign-container" id="registration" style="margin-top:75px">
-    <h1 class="myDesign-text-myColor"><b>Registration</b></h1>
+  <div class="myDesign-container" id="registration" style="margin-top:75px">
+    <h1 class="myDesign-xxxlarge myDesign-text-myColor"><b>Registration</b></h1>
+    <!-- <hr style="width:50px;border:5px solid red" class="myDesign-round"> -->
     <p>To be announced.</p>
-  </div> -->
+  </div>
   <!-- ================================================================================= -->
   <!-- ================================================================================= -->
   <!-- ================================================================================= -->
@@ -591,13 +211,29 @@ body {font-size:16px; margin:0;}
   <!-- ================================================================================= --> 
   <!-- Organizing Committee-->
   <div class="myDesign-container" id="organizingcommittee" style="margin-top:75px">
-    <h1 class="myDesign-text-myColor"><b>Organizers</b></h1>
+    <h1 class="myDesign-xxxlarge myDesign-text-myColor"><b>Organizing Committee</b></h1>
     <!-- <hr style="width:50px;border:5px solid red" class="myDesign-round"> -->
-    <p> 
+    <p>
+	    <center>
 	      <table class="myDesign-tableOrganizer">
+	        <tr>
+	          <td align="right"><b><a href=" " target="_blank">Jimboy Albaracin</a></b></td>
+	          <td align="left">University of the Philippines Cebu, Philippines</td>
+	        </tr>
+			
 	        <tr> 
 			  <td align="right"><b><a href="https://sites.google.com/site/masatowebe/" target="_blank">Masato KIMURA</a></b></td>
 	          <td align="left">Kanazawa University, Japan</td>
+	        </tr>
+
+	        <tr> 
+			  <td align="right"><b><a href="https://math.upd.edu.ph/faculty/mendoza-renier" target="_blank">Renier MENDOZA</a></b></td>
+	          <td align="left">University of the Philippines Diliman, Philippines</td>
+	        </tr>
+			
+	        <tr> 
+			  <td align="right"><b><a href="https://math.upd.edu.ph/faculty/mohammad-rhudaina" target="_blank">Rhudaina MOHAMMAD</a></b></td>
+	          <td align="left">University of the Philippines Diliman, Philippines</td>
 	        </tr>
 
 	        <tr> 
@@ -606,31 +242,23 @@ body {font-size:16px; margin:0;}
 	        </tr>
 			
 	        <tr>
-	          <td align="right"><b>Ousamma OUNISSI</b></td>
-	          <td align="left">Kanazawa University, Japan</td>
-	        </tr>
-			
-	        <tr>
-	          <td align="right"><b>Kharisma Surya PUTRI</b></td>
-	          <td align="left">Kanazawa University, Japan</td>
-	        </tr>
-			
-	        <tr>
 	          <td align="right"><b><a href="https://jftrabago.github.io/" target="_blank">Julius Fergy RABAGO</a></b></td>
 	          <td align="left">Kanazawa University, Japan</td>
+	        </tr>
+			
+	        <tr>
+	          <td align="right"><b><a href=" " target="_blank">Daisy ROMERO</a></b></td>
+	          <td align="left">University of the Philippines Cebu, Philippines</td>
 	        </tr>
 			
 	        <tr> 
 	          <td align="right"><b><a href="https://sites.google.com/site/koyasakakibara/home" target="_blank">Koya SAKAKIBARA</a></b></td>
 	          <td align="left">Kanazawa University, Japan</td>
 	        </tr>
-			
-			
 	      </table>
+	    </center>
 	</p>
   </div>
-  
-
 
   <!-- ================================================================================= -->
   <!-- ================================================================================= -->
@@ -643,13 +271,194 @@ body {font-size:16px; margin:0;}
   <!-- ================================================================================= --> 
   <!-- Contact -->
   <div class="myDesign-container" id="contact" style="margin-top:75px">
-    <h1 class="myDesign-text-myColor"><b>Contact</b></h1>
+    <h1 class="myDesign-xxxlarge myDesign-text-myColor"><b>Contact</b></h1>
     <!-- <hr style="width:50px;border:5px solid red" class="myDesign-round"> -->
     <p>If you have any questions or requests, send an e-mail to the local organizing committee at TBA.</p>
   </div>
   <!-- ================================================================================= -->
   <!-- ================================================================================= -->
   <!-- ================================================================================= --> 
+  
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+	  <!-- Previous Meetings -->
+	<div class="myDesign-container" id="history" style="margin-top:75px">
+	  <h1 class="myDesign-xxxlarge myDesign-text-myColor"><b>Previous Meetings</b></h1>
+	  <table class="myDesign-table" border="1">
+	    <colgroup>
+	      <col style="width: 30%;">
+	      <col style="width: 12.5%;">
+	      <col style="width: 27.5%;">
+	      <col style="width: 30%;">
+	    </colgroup>
+	    <thead>
+	      <tr>
+	        <th>Event</th>
+	        <th>Dates</th>
+	        <th>Venue</th>
+	        <th>Notes</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+	      <tr>
+	        <td>Seminar on Fracture Criteria from a Mathematical Perspective</td>
+	        <td>1995.01.27&ndash;29</td>
+	        <td>KKR Yamashiro-so, Kaga City, Ishikawa Prefecture</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td>Theoretical Research on Fracture Phenomena and Related Topics</td>
+	        <td>1995.11.23&ndash;25</td>
+	        <td>Okino Island, Etajima City, Seto Inland Sea</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td>Theoretical Research on Fracture Phenomena and Related Topics</td>
+	        <td>1997.01.14&ndash;16</td>
+	        <td>Keisensou, Kumano Town, Yamaguchi City</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td>Mathematical Research on Fracture Phenomena with Applications to Earthquakes</td>
+	        <td>1999.01.21&ndash;23</td>
+	        <td>Earthquake Research Institute, University of Tokyo</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td>Theoretical and Numerical Analysis of Fracture</td>
+	        <td>1999.11.14&ndash;16</td>
+	        <td>Shonan Village Center, Miura District, Kanagawa Prefecture</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td>Theoretical and Numerical Analysis of Fracture</td>
+	        <td>2000.01.10&ndash;12</td>
+	        <td>Togura Postal Welfare Resort, Nanao City, Ishikawa Prefecture</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td><a href="https://sites.google.com/a/comfos.org/comfos/meetings/year-2007/comfos07" target="_blank">CoMFoS07</a></td>
+	        <td>2007.11.25&ndash;27</td>
+	        <td>Hiroshima Institute of Technology</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td><a href="https://sites.google.com/a/comfos.org/comfos/meetings/year-2008/comfos08" target="_blank">CoMFoS08</a></td>
+	        <td>2008.10.27&ndash;29</td>
+	        <td>Kyodai Kaikan</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td><a href="https://sites.google.com/a/comfos.org/comfos/meetings/year-2009/comfos09" target="_blank">CoMFoS09</a></td>
+	        <td>2009.11.21&ndash;23</td>
+	        <td>Shonan Village Center</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td><a href="https://sites.google.com/a/comfos.org/comfos/meetings/year2010/comfos10/talks" target="_blank">CoMFoS10</a></td>
+	        <td>2010.11.22&ndash;23</td>
+	        <td>Okayama University of Science</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td><a href="https://sites.google.com/a/comfos.org/comfos/meetings/year-2011/comfos11" target="_blank">CoMFoS11</a></td>
+	        <td>2011.10.08&ndash;10</td>
+	        <td>Hiroshima Institute of Technology</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td>CoMFoS12</td>
+	        <td>2012.10.06&ndash;08</td>
+	        <td>University of Electro-Communications</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td>CoMFoS13</td>
+	        <td>2013.10.12&ndash;14</td>
+	        <td>Kanazawa University Satellite Plaza</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td>CoMFoS14</td>
+	        <td>2014.10.11&ndash;13</td>
+	        <td>Kyoto University Rakuyu Kaikan and Centennial Clock Tower Memorial Hall</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td><a href="" target="_blank">CoMFoS15</a></td>
+	        <td>2015.11.16&ndash;18</td>
+	        <td>Nishijin Plaza, Kyushu University</td>
+	        <td><a href="https://link.springer.com/book/10.1007/978-981-10-2633-1" target="_blank">Proceedings published</a></td>
+	      </tr>
+	      <tr>
+	        <td><a href="https://sites.google.com/site/comfos16/home" target="_blank">CoMFoS16</a></td>
+	        <td>2016.10.22&ndash;24</td>
+	        <td>Nishijin Plaza, Kyushu University</td>
+	        <td><a href="https://link.springer.com/book/10.1007/978-981-10-6283-4" target="_blank">Proceedings published</a></td>
+	      </tr>
+	      <tr>
+	        <td><a href="" target="_blank">CoMFoS17</a></td>
+	        <td>2017.09.20&ndash;22</td>
+	        <td>Seaside House, Okinawa Institute of Science and Technology</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td><a href="" target="_blank">CoMFoS18</a></td>
+	        <td>2018.06.13&ndash;15</td>
+	        <td>Shiran Kaikan, Kyoto University</td>
+	        <td><a href="https://link.springer.com/book/10.1007/978-981-15-6062-0" target="_blank">Proceedings published</a></td>
+	      </tr>
+	      <tr>
+	        <td><a href="https://sites.google.com/view/comfos19/" target="_blank">CoMFoS19</a></td>
+	        <td>2019.07.15&ndash;16</td>
+	        <td>Shiinoki Cultural Complex, Kanazawa City</td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td>CoMFoS20 (Joint with the Second Russia-Japan Workshop)</td>
+	        <td>2020.12.15&ndash;17</td>
+	        <td>Tokyo and Novosibirsk (Online)</td>
+	        <td>"Mathematical analysis of fracture phenomena for elastic structures and its applications"</td>
+	      </tr>
+	      <tr>
+	        <td>CoMFoS21 (Joint with the Third Russia-Japan Workshop)</td>
+	        <td>2021.12.14&ndash;16</td>
+	        <td>Tokyo and Novosibirsk (Online)</td>
+	        <td>"Mathematical analysis of fracture phenomena for elastic structures and its applications"</td>
+	      </tr>
+	      <tr>
+	        <td><a href="https://sites.google.com/view/comfos22" target="_blank">CoMFoS22</a></td>
+	        <td>2022.12.06&ndash;07</td>
+	        <td>(Online)</td>
+	        <td>Austria, China, Czech Republic, India, Italy, Japan, Russia.</td>
+	      </tr>
+	      <tr>
+	        <td><a href="https://sites.google.com/view/comfos23" target="_blank">CoMFoS23</a></td>
+	        <td>2023.12.11&ndash;12</td>
+	        <td>(Online)</td>
+	        <td>Finland, Germany, Italy, Japan, Netherlands, Philippines, United Kingdom.</td>
+	      </tr>
+	      <tr>
+	        <td>CoMFoS24</td>
+	        <td>(not held)</td>
+	        <td></td>
+	        <td></td>
+	      </tr>
+	      <tr>
+	        <td><a href="https://jftrabago.github.io/MNANP2025/" target="_blank">CoMFoS25</a></td>
+	        <td>2025.03.16&ndash;17</td>
+	        <td>Shiinoki Cultural Complex, Kanazawa City</td>
+	        <td>Held in conjuction with "<a href="https://jftrabago.github.io/MNANP2025/" target="_blank">Modeling and Numerical Analysis of Nonlinear Phenomena 2025</a>"</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div>
+
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+ 
   
 <!-- End page content -->
 </div>
@@ -662,7 +471,7 @@ body {font-size:16px; margin:0;}
 
 
 <!-- MAIN.CSS Container -->
-<div class="myDesign-light-grey myDesign-container myDesign-padding-32" style="margin-top:75px;padding-right:58px"><p class="myDesign-right">&copy; <a href="#" title="MAIN.CSS" target="_blank" class="myDesign-hover-opacity">CAS&ndash;KU Workshop Organizers 2025</a></p></div>
+<div class="myDesign-light-grey myDesign-container myDesign-padding-32" style="margin-top:75px;padding-right:58px"><p class="myDesign-right">&copy; <a href="https://macm.jsiam.org/home/CoMFoS" title="MAIN.CSS" target="_blank" class="myDesign-hover-opacity">Mathematical Aspects of Continuum Mechanics</a></p></div>
 
 <script>
 // Script to open and close sidebar
@@ -684,51 +493,6 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 </script>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-
-<script>
-async function saveScheduleAsPDF() {
-  const { jsPDF } = window.jspdf;
-  const schedule = document.getElementById("schedule");
-
-  // Capture the schedule content as a canvas
-  const canvas = await html2canvas(schedule, {
-    scale: 2,
-    useCORS: true
-  });
-
-  const pdf = new jsPDF('p', 'mm', 'a4');
-  const pageWidth = 210;  // A4 width in mm
-  const pageHeight = 297; // A4 height in mm
-
-  // Convert canvas size to mm scale for PDF
-  const canvasWidth = canvas.width;
-  const canvasHeight = canvas.height;
-
-  // Calculate scale to fit canvas into A4
-  const scaleX = pageWidth / canvasWidth;
-  const scaleY = pageHeight / canvasHeight;
-  const scale = Math.min(scaleX, scaleY);
-
-  const imgWidth = canvasWidth * scale;
-  const imgHeight = canvasHeight * scale;
-
-  const imgData = canvas.toDataURL('image/png');
-
-  // Center the image if needed
-  const xOffset = (pageWidth - imgWidth) / 2;
-  const yOffset = (pageHeight - imgHeight) / 2;
-
-  pdf.addImage(imgData, 'PNG', xOffset, yOffset, imgWidth, imgHeight);
-  pdf.save("Program.pdf");
-}
-</script>
-
-
-
 
 </body>
 </html>
