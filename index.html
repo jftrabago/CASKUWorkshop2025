@@ -75,9 +75,11 @@ body {font-size:16px; margin:0;}
     <a href="#about" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">About</a> 
     <a href="#speakers" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Speakers</a> 
     <a href="#schedule" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Program</a>
+    <a href="#abstracts" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Abstracts</a>
     <a href="#venue" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Venue</a> 
     <a href="#organizingcommittee" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Organizers</a> 
-    <a href="#contact" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Contact</a>
+    <a href="#sponsors" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Sponsors</a>
+	<a href="#contact" onclick="myDesign_close()" class="myDesign-bar-item myDesign-button myDesign-hover-white">Contact</a>
   </div>
 </nav>
 
@@ -267,6 +269,9 @@ body {font-size:16px; margin:0;}
 	  <!-- Program -->
 	  <div id="schedule" style="margin-top:75px; font-family: Avenir, sans-serif;" >
 	  <h1 class="myDesign-text-myColor"><b>Program</b></h1>
+	  <a href="assets/CASKUprogram.pdf" target="_blank">
+	    <button>Download Program as PDF</button>
+	  </a>
 	    <!-- Day 1 Program --> 
 	    <h3>Day 1: November 2, 2025</h3>
 	    <table border="1" cellspacing="0" cellpadding="5" style="width:80%; border-collapse: collapse;">
@@ -460,15 +465,28 @@ body {font-size:16px; margin:0;}
   <!-- ================================================================================= -->
   
  <!-- Print Button -->
- <br>
+ <!-- <br> -->
  <!-- <div style="text-align:left; margin-bottom:15px;">
  	<button onclick="saveScheduleAsPDF()">Download Program as PDF</button>
  </div> -->
-  <a href="assets/CASKUprogram.pdf" target="_blank">
-    <button>Download Program as PDF</button>
-  </a>
+
+
+
   
   
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+  <!-- Registration -->
+  <div class="myDesign-container" id="abstracts" style="margin-top:75px">
+    <h1 class="myDesign-text-myColor"><b>Abstracts</b></h1>
+  	<a href="assets/CASKUabstracts.pdf" target="_blank">
+    <button>Download Abstracts</button>
+  	</a>
+  </div>
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
   
   
   
@@ -571,6 +589,24 @@ body {font-size:16px; margin:0;}
   <!-- ================================================================================= -->
   <!-- ================================================================================= --> 
   
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
+  <!-- SPONSORS -->
+  <div class="myDesign-container" id="sponsors" style="margin-top:75px">
+    <h1 class="myDesign-text-myColor"><b>Sponsors</b></h1>
+    <!-- <hr style="width:50px;border:5px solid red" class="myDesign-round"> -->
+    <p>
+	  <img src="images/JSPS.pdf" alt="JSPS" style="width: 30%">
+      <img src="images/JST.png" alt="JST" style="width: 30%"><br>
+	  <img src="images/ku.png" alt="KU" style="width: 30%">
+	  <img src="images/CREST.png" alt="CREST" style="width: 30%">
+
+	</p>
+  </div>
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= -->
+  <!-- ================================================================================= --> 
   
   
   <!-- ================================================================================= -->
@@ -585,6 +621,10 @@ body {font-size:16px; margin:0;}
   <!-- ================================================================================= -->
   <!-- ================================================================================= -->
   <!-- ================================================================================= --> 
+  
+  
+
+ 
   
 <!-- End page content -->
 </div>
